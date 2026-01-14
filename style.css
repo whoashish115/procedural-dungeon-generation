@@ -1,0 +1,141 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0d0f14;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#controls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 12, 16, 0.96);
+  color: #fff;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  z-index: 10;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+#controls .group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#controls label {
+  font-size: 12px;
+}
+
+#controls input[type="range"] {
+  width: 220px;
+}
+
+#controls button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #e8e8e8;
+  color: #111;
+  font-weight: 700;
+}
+
+#status {
+  font-size: 12px;
+  min-width: 240px;
+  opacity: 0.95;
+}
+
+#hud {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+#hint {
+  margin-left: auto;
+  text-align: right;
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 6, 9, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+#overlay .panel {
+  background: #14161d;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px 28px;
+  min-width: 280px;
+  max-width: 360px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+#overlay h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+#overlay p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.statsGrid span.label {
+  opacity: 0.7;
+}
+
+.statsGrid span.value {
+  font-weight: 700;
+  text-align: right;
+}
+
+#overlayBtn {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #e8e8e8;
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+}

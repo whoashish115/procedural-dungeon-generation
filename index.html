@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Procedural Dungeon Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="p5-1.11.11.js"></script>
+</head>
+<body>
+  <div id="controls">
+    <div class="group">
+      <label for="tileSize">Pixel size: <span id="tileSizeVal">12</span></label>
+      <input id="tileSize" type="range" min="6" max="24" value="12" />
+    </div>
+
+    <button id="regenBtn">Generate Dungeon</button>
+
+    <div id="hud">
+      <div id="hearts">Hearts: ♥♥♥♥♥♥♥</div>
+      <div id="lifeline">Lifeline: 1</div>
+    </div>
+
+    <div id="status">Explore the dungeon.</div>
+
+    <div id="hint">
+      Move: hold Arrow keys / WASD<br>
+      Attack/Scare: Space or E<br>
+      R: regenerate
+    </div>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div class="panel">
+      <h2 id="overlayTitle">Dungeon Cleared</h2>
+      <p id="overlaySubtitle">You reached the exit.</p>
+      <div class="statsGrid" id="statsGrid"></div>
+      <button id="overlayBtn">Descend</button>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
